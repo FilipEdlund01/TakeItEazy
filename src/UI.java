@@ -15,6 +15,7 @@ public class UI extends JPanel {
     public Polygon Poly2;
     public Polygon Poly3;
     public Polygon Poly4;
+
     public Polygon Poly5;
     public int a = 50;
 
