@@ -18,6 +18,11 @@ public class UI extends JPanel {
 
     public Polygon Poly5;
     public int a = 50;
+   // public double v = Math.sqrt(Math.pow(a, 2)/4)-(Math.pow(a,2));
+   public double v =(Math.sqrt(3) * a);
+
+
+    int Pv = (int) v;
 
    /* Let the length of the sides of the regular hexagon be  a  units.
 
@@ -112,8 +117,9 @@ public class UI extends JPanel {
 
     public void movePolygons() {
 
+        System.out.println(Pv);
+        poly2.translate(0, -Pv);
 
-        poly2.translate(0, -90);
 
         /*poly3.translate(0, 105);
 
