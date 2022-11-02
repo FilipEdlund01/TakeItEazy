@@ -1,9 +1,22 @@
 import java.awt.*;
 import javax.swing.*;
 import java.lang.Math;
+import java.awt.event.*;
+
+class DragMouseAdapter extends MouseAdapter {
+    public void mousePressed(MouseEvent e) {
+        JComponent c = (JComponent) e.getSource();
+        TransferHandler handler = c.getTransferHandler();
+        handler.exportAsDrag(c, e, TransferHandler.COPY);
+    }
+}
 
 
 public class UI extends JPanel {
+    ImageIcon icon1 = new ImageIcon("C:\\Users\\edlun\\Desktop\\TakeItEazy\\src\\Images\\Hexagon.jpg");
+    JLabel label1 = new JLabel(icon1);
+    MouseListener listener = new DragMouseAdapter();
+    //label1.addMouseListener(listener);
 
 
     public Polygon poly;
@@ -121,13 +134,13 @@ public class UI extends JPanel {
         poly2.translate(0, -Pv);
 
 
-        /*poly3.translate(0, 105);
+        poly3.translate(a+a/2, -Pv/2);
 
 
-        poly4.translate(0, 50);
+        poly4.translate(-a-a/2, -Pv/2);
 
 
-        poly5.translate(0, 100);*/
+        poly5.translate(0, Pv);
 
 
         Poly2 = poly2;
